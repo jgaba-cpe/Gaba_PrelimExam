@@ -1,0 +1,12 @@
+---
+ - hosts: 192.168.56.102
+   roles:
+     - python
+     - java
+     - role: change-motd
+       vars: 
+         motd: "Ansible Managed node by jgaba"
+     - role: create-user
+       vars:
+         username: "qjpgaba0926"
+         name: "Jander P. Gaba"
